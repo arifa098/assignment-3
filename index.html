@@ -1,76 +1,301 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Burst</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Burst</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-        <nav class="mx-40 mt-10 bg-red-400 rounded-full shadow-lg flex items-center justify-between px-10 py-5">
-            <ul class="flex items-center space-x-4">
-              <li><a href="" class="text-white text-xs hover:text-gray-900">Home</a></li>
-              <li><a href="" class="text-white text-xs hover:text-gray-900">About Us</a></li>
-              <li><a href="" class="text-white text-xs hover:text-gray-900">Shop</a></li>
-              <li><a href="" class="text-white text-xs hover:text-gray-900">All Fruits</a></li>
-            </ul>
-            <div class="flex items-center space-x-4">
-              <img src="./images/logo.png" alt="Logo" class="h-11 w-11">
-              <h1 class="text-3xl font-semibold text-white">Fruit Burst</h1>
+  <header>
+    <nav class="mx-40 mt-10 bg-red-400 rounded-full shadow-lg flex items-center justify-between px-10 py-5">
+        <ul class="flex items-center space-x-4">
+          <li><a href="" class="text-white text-xs hover:text-gray-900">Home</a></li>
+          <li><a href="" class="text-white text-xs hover:text-gray-900">About Us</a></li>
+          <li><a href="" class="text-white text-xs hover:text-gray-900">Shop</a></li>
+          <li><a href="" class="text-white text-xs hover:text-gray-900">All Fruits</a></li>
+        </ul>
+        <div class="flex items-center space-x-4">
+          <img src="./images/logo.png" alt="Logo" class="h-11 w-11">
+          <h1 class="text-3xl font-semibold text-white">Fruit Burst</h1>
+        </div>
+        <label class="relative block">
+            <span class="sr-only">Search</span>
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fa-solid fa-magnifying-glass fa-xs" style="color: #999999;"></i>
+            </span>
+            <input class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-full py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search Here" type="text" name="search"/>
+        </label>
+    </nav>
+  </header>
+  <main>
+    <!-- Banner -->
+    <section class="mx-40 mt-10">
+      <div class="carousel w-full rounded">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="./images/banner1.png" class="w-full" />
+          <div class="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
+          <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-4">
+              <h1 class="text-5xl text-white font-bold mb-4">Exotic tastes at your doorstep</h1>
+              <p class="text-lg md:text-xl text-white text-center mb-8">We supply highly quality organic products</p>
+              <a href="#" class="bg-red-500 text-white px-6 py-3 rounded-lg font-medium transition duration-300 hover:bg-black hover:text-white">Shop Now</a>
+          </div>
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle">❮</a> 
+              <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div> 
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle">❮</a> 
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle">❮</a> 
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deals of the day -->
+    <section class="mx-40 mt-10">
+      <div class="flex justify-between mb-10">
+        <div>
+          <h2 class="font-bold text-3xl">Deals Of The Day</h2>
+          <small>Get exciting deals everyday. Grab before stock runs out.</small>
+        </div>
+
+        <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-4xl font-bold">
+              <span style="--value:15;"></span>
+            </span>
+            days
+          </div> 
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-4xl font-bold">
+              <span style="--value:10;"></span>
+            </span>
+            hours
+          </div> 
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-4xl font-bold">
+              <span style="--value:24;"></span>
+            </span>
+            min
+          </div> 
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-4xl font-bold">
+              <span style="--value:57;"></span>
+            </span>
+            sec
+          </div>
+        </div>
+      </div>
+
+      <!-- cards -->
+      <div class="flex">
+        <div class="card rounded w-1/4 h-fit bg-base-100 border-2 mx-1">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit6.png" alt="Apple" class="rounded object-contain h-20 w-24" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.90$</h2>
+            <div class="divider my-0"></div>
+            <small>Apples</small>
+            <div class="flex my-4">
+              <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
             </div>
-            <label class="relative block">
-                <span class="sr-only">Search</span>
-                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <i class="fa-solid fa-magnifying-glass fa-xs" style="color: #999999;"></i>
-                </span>
-                <input class="placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-full py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search Here" type="text" name="search"/>
-            </label>
-        </nav>
-    </header>
-    <main>
-        <!-- Banner -->
-        <section class="mx-40 mt-10">
-            <div class="carousel w-full rounded">
-                <div id="slide1" class="carousel-item relative w-full">
-                    <img src="./images/banner1.png" class="w-full" />
-                    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-40"></div>
-                    <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-4">
-                        <h1 class="text-5xl text-white font-bold mb-4">Exotic tastes at your doorstep</h1>
-                        <p class="text-lg md:text-xl text-white text-center mb-8">We supply highly quality organic products</p>
-                        <a href="#" class="bg-red-500 text-white px-6 py-3 rounded-lg font-medium transition duration-300 hover:bg-black hover:text-white">Shop Now</a>
+            <div class="card-actions">
+              <!-- The button to open modal -->
+              <label for="my_modal_6" class="btn btn-link no-underline text-red-500 font-semibold">Details</label>
+              <!-- Put this part before tag -->
+              <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+              <div class="modal">
+                <div class="modal-box">
+                  <div class="mx-28">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit6.png" alt="Apple" class="rounded mb-5 object-contain h-48 w-48" />
+                    </figure>
+                    <h3 class="font-bold text-lg">Apples</h3>
+                    <small class="py-4">We believe in your satisfaction and get fresh apples from Fruit Burst with a mild and sweet pleasant flavor.</small>
+                    <div class="flex justify-center my-4">
+                      <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
                     </div>
-                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" class="btn btn-circle">❮</a> 
-                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    <div class="modal-action flex justify-center">
+                      <label for="my_modal_6" class="rounded px-4 py-3 bg-red-500 text-white">Buy Now</label>
+                      <label for="my_modal_6" class="rounded px-4 py-3 border border-red-500 text-red-500">Close</label>
                     </div>
-                </div> 
-                <div id="slide2" class="carousel-item relative w-full">
-                  <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full">
-                  <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide4" class="btn btn-circle">❯</a>
                   </div>
                 </div>
+              </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <h1>footer</h1>
-    </footer>
+          </div>
+        </div>
+        <div class="card rounded w-1/4 h-fit bg-base-100 border-2 mx-1">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit7.png" alt="Orange" class="rounded object-contain h-20 w-24" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.90$</h2>
+            <div class="divider my-0"></div>
+            <small>Oranges</small>
+            <div class="flex my-4">
+              <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+            </div>
+            <div class="card-actions">
+              <!-- The button to open modal -->
+              <label for="my_modal_6" class="btn btn-link no-underline text-red-500 font-semibold">Details</label>
+              <!-- Put this part before tag -->
+              <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+              <div class="modal">
+                <div class="modal-box">
+                  <div class="mx-28">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit7.png" alt="Orange" class="rounded mb-5 object-contain h-48 w-48" />
+                    </figure>
+                    <h3 class="font-bold text-lg">Oranges</h3>
+                    <small class="py-4">The orange is the fruit of the citrus species Citrus x sinensis in the family Rutaceae, native to China.</small>
+                    <div class="flex justify-center my-4">
+                      <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                    </div>
+                    <div class="modal-action flex justify-center">
+                      <label for="my_modal_6" class="rounded px-4 py-3 bg-red-500 text-white">Buy Now</label>
+                      <label for="my_modal_6" class="rounded px-4 py-3 border border-red-500 text-red-500">Close</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card rounded w-1/4 h-fit bg-base-100 border-2 mx-1">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit8.png" alt="Dragon Fruit" class="rounded object-contain h-20 w-24" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.90$</h2>
+            <div class="divider my-0"></div>
+            <small>Dragon Fruits</small>
+            <div class="flex my-4">
+              <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+            </div>
+            <div class="card-actions">
+              <!-- The button to open modal -->
+              <label for="my_modal_6" class="btn btn-link no-underline text-red-500 font-semibold">Details</label>
+              <!-- Put this part before tag -->
+              <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+              <div class="modal">
+                <div class="modal-box">
+                  <div class="mx-28">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit6.png" alt="Apple" class="rounded mb-5 object-contain h-48 w-48" />
+                    </figure>
+                    <h3 class="font-bold text-lg">Apples</h3>
+                    <small class="py-4">We believe in your satisfaction and get fresh apples from Fruit Burst with a mild and sweet pleasant flavor.</small>
+                    <div class="flex justify-center my-4">
+                      <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                    </div>
+                    <div class="modal-action flex justify-center">
+                      <label for="my_modal_6" class="rounded px-4 py-3 bg-red-500 text-white">Buy Now</label>
+                      <label for="my_modal_6" class="rounded px-4 py-3 border border-red-500 text-red-500">Close</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card rounded w-1/4 h-fit bg-base-100 border-2 mx-1">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit9.png" alt="Banana" class="rounded object-contain h-20 w-24" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">12.90$ - 18.90$</h2>
+            <div class="divider my-0"></div>
+            <small>Bananas</small>
+            <div class="flex my-4">
+              <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+              <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+            </div>
+            <div class="card-actions">
+              <!-- The button to open modal -->
+              <label for="my_modal_6" class="btn btn-link no-underline text-red-500 font-semibold">Details</label>
+              <!-- Put this part before tag -->
+              <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+              <div class="modal">
+                <div class="modal-box">
+                  <div class="mx-28">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/fruit6.png" alt="Apple" class="rounded mb-5 object-contain h-48 w-48" />
+                    </figure>
+                    <h3 class="font-bold text-lg">Apples</h3>
+                    <small class="py-4">We believe in your satisfaction and get fresh apples from Fruit Burst with a mild and sweet pleasant flavor.</small>
+                    <div class="flex justify-center my-4">
+                      <i class="fa-solid fa-star fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star-half-stroke fa-sm" style="color: #f85559;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                      <i class="fa-solid fa-star fa-sm" style="color: #fbc0a8;"></i>
+                    </div>
+                    <div class="modal-action flex justify-center">
+                      <label for="my_modal_6" class="rounded px-4 py-3 bg-red-500 text-white">Buy Now</label>
+                      <label for="my_modal_6" class="rounded px-4 py-3 border border-red-500 text-red-500">Close</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-5">
+        <a href="#" class="bg-red-500 text-white px-6 py-3 rounded-lg font-medium transition duration-300 hover:bg-black hover:text-white">Shop All</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h1>footer</h1>
+  </footer>
 </body>
 </html>
